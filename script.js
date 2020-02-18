@@ -44,8 +44,6 @@ startbutton.addEventListener("click",()=>{
 
 function player(){
     if (randomarray[count]==this.innerHTML && count<=randomarray.length-1){
-        console.log(randomarray)
-        console.log(count)
         count++
         if (count>randomarray.length-1){ 
             scorenumber= scorenumber+1

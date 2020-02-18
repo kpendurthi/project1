@@ -1,15 +1,26 @@
 body {
-    align-items: center;
   background: cadetblue;
+  display: grid;
+  height: 400vh;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 200px 200px 50px;
 }
 header{
-    align-items: center;
+  grid-row: 1;
+  display: grid;
+  grid-column: 2/ span 1;
+  text-align: center;
+
 }
 .container {
+    grid-row: 2;
     display: grid;
     width: 200px;
     height: 200px;
     grid-template-columns: auto auto ;
+    text-align: center;
+    grid-column: 2/ span 1;
+  
   }
 
   .block {
@@ -24,7 +35,7 @@ header{
   }
 
  #block1{
- background-color: green;
+   background-color: green;
   }
   #block2{
     background-color: red;
@@ -34,4 +45,19 @@ header{
  }
  #block4{
     background-color:blue;
+ }
+ .buttonContainer{
+  grid-row: 3;
+  display: grid;
+  width: 200px;
+  height: 20px;
+  grid-template-columns: auto auto ;
+  text-align: center;
+  grid-column: 2/ span 1;
+  justify-items: center;
+ }
+ h2{
+  width: 5px;
+  height: 5px;
+  text-align: center;
  }
