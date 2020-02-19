@@ -3,7 +3,7 @@ body {
   display: grid;
   height: 400vh;
   grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 200px 200px 50px;
+  grid-template-rows: 100px 50px 200px 50px;
 }
 header{
   grid-row: 1;
@@ -12,15 +12,27 @@ header{
   text-align: center;
 
 }
+.score{
+  grid-row: 2;
+  display: grid;
+  width: 100px;
+  height: 50px;
+  grid-template-columns: auto auto ;
+  grid-column: 2/ span 1;
+  font-style: italic;
+  font-size: large;
+  font-weight: 300;
+  
+}
 .container {
-    grid-row: 2;
+    grid-row: 3;
     display: grid;
     width: 200px;
     height: 200px;
     grid-template-columns: auto auto ;
     text-align: center;
     grid-column: 2/ span 1;
-  
+    border-radius: 100px;
   }
 
   .block {
@@ -32,30 +44,40 @@ header{
     font-size: 3rem;
     font-weight: bold;
     border: 3px solid black;
+    
+  
   }
 
  #block1{
    background-color: green;
+   border-radius: 100px;
   }
   #block2{
     background-color: red;
+    border-radius: 100px;
  }
  #block3{
     background-color:yellow;
+    border-radius: 100px;
  }
  #block4{
     background-color:blue;
+    border-radius: 100px;
  }
+
  .buttonContainer{
-  grid-row: 3;
+  grid-row: 4;
   display: grid;
   width: 200px;
   height: 20px;
   grid-template-columns: auto auto ;
   text-align: center;
   grid-column: 2/ span 1;
-  justify-items: center;
+  font-style: italic;
+  font-size: large;
+  align-items: end;
  }
+
  h2{
   width: 5px;
   height: 5px;

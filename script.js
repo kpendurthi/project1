@@ -39,11 +39,14 @@ startbutton.addEventListener("click",()=>{
     blocks.forEach(block => {
         block.addEventListener('click',player)  
     }) 
+    
     highlightblock()
 })
 
 function player(){
-    if (randomarray[count]==this.innerHTML && count<=randomarray.length-1){
+    //console.log(this.getAttribute("name"))
+    //if (randomarray[count]==this.innerHTML && count<=randomarray.length-1){
+        if (randomarray[count]==this.getAttribute("name") && count<=randomarray.length-1){  
         count++
         if (count>randomarray.length-1){ 
             scorenumber= scorenumber+1
