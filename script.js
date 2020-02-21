@@ -25,9 +25,30 @@ function settimeinterval(colorblock,time){
 function highlightblock(){
     for(let i=0;i<randomarray.length;i++){  
         var highlightblock= document.querySelector(`#block${randomarray[i]}`)
-        var prevblockcolor=highlightblock.style
         settimeinterval(highlightblock,i)
      }
+}
+
+function player(){
+
+    if (randomarray[count]==this.getAttribute("name") && count<=randomarray.length-1){  
+        count++
+        if (count>randomarray.length-1){ 
+            scorenumber= scorenumber+1
+            score.innerHTML=scorenumber
+            count=0
+            randomnumber()
+            highlightblock()
+           }
+    } else if(randomarray.length==0 && count==0){
+            alert("please click on start button to start new game ")
+    }else if(randomarray[count]!=this.getAttribute("name")){
+        alert("you have lost the game ")
+        scorenumber=0
+        count=0
+        score.innerHTML=0
+        randomarray=[]
+    } 
 }
 
 startbutton.addEventListener("click",()=>{
@@ -43,31 +64,11 @@ startbutton.addEventListener("click",()=>{
     highlightblock()
 })
 
-function player(){
-    //console.log(this.getAttribute("name"))
-    //if (randomarray[count]==this.innerHTML && count<=randomarray.length-1){
-        if (randomarray[count]==this.getAttribute("name") && count<=randomarray.length-1){  
-        count++
-        if (count>randomarray.length-1){ 
-            scorenumber= scorenumber+1
-            score.innerHTML=scorenumber
-            count=0
-            randomnumber()
-            highlightblock()
-           }
-    } else {
-        alert("you have lost the game ")
-        scorenumber=0
-        count=0
-        score.innerHTML=0
-    } 
-}
-
 quitbutton.addEventListener("click",()=>{
     console.log("quit")
     scorenumber=0
     count=0
     score.innerHTML=0
     randomarray=[]
-})
+}) 
 
